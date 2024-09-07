@@ -27,27 +27,41 @@ using UNIX signals in C.
 ## Useful commands
 	- Ensure that libftprintf.a has been archived
 		>> make
+   
+   - To run server
+      >> ./server
+
+   - To run client
+      >> ./client
 
 
 ## Documentation
 
-1. Format argument is reused whenever necessary to convert all given arguments.
-   > printf %s a b
-
-   > 'ab'
-
+1. Create a communication program in the form of client and server. 
+2. Start the server. 
+3. Upon launch, server has to print PID. 
+4. Start the client. 
+5. Client takes in two parameters:
+   1. Server PID
+   2. String to send
+6. Client must send the string passed as a parameter to the server. 
+7. Once the string has been received, the server must print it. 
+   1. Server has to display the string pretty quickly. 
+   2. Server should be able to receive strings from several clients in a row without having to restart. 
+8. Communication between client and server has to be done only using UNIX signals
+9. Can only use two signals: SIGUSR1, SIGUSE2
 
 
 ## Test cases
 
 1. Positive cases
-   - %c single character
+   - Sending normal pid values over server
 
 
 2. Negative cases
-   - %c single character
+   - Sending invalid pid (-1), 
 
 
 3. Edge cases
-   - Dealing with format specifiers out of scope within printf
+   - NA
 

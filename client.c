@@ -6,11 +6,11 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:57:55 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/04 21:28:10 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/09/07 21:21:16 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 
 /**
  * Note: Guard process id that I can send with the client
@@ -22,3 +22,7 @@
  * GUARD THE PID CAREFULLY WHAT IS ACCEPTED
  * 
  */
+int main()
+{
+    return (1);
+}
