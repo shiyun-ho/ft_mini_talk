@@ -6,7 +6,7 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:47:02 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/08 20:33:56 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/09/08 20:47:28 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
  * https://beej.us/guide/bgc/html/split/signal-handling.html
  * https://www.gnu.org/software/libc/manual/html_node/Signal-Handling.html
 */
-void signal_handler()
+void signal_handler(int signum)
 {
-    
+    signal(SIGUSR1, signal_handler);
 }
 
 /**
@@ -40,6 +40,7 @@ void server()
     //Raise signal
     kill(server_pid, SIGUSR1);
     // signal(SIGUSR1, signal_handler);
+    signal_handler(SIGUSR1);
     while(1)
     {
         
