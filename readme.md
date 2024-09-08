@@ -5,7 +5,9 @@
   - [To Do](#to-do)
   - [Useful commands](#useful-commands)
   - [Documentation](#documentation)
+  - [Allowed Functions](#allowed-functions)
   - [Test cases](#test-cases)
+    - [References](#references)
 
 ## Description
 Mini talk is a project which codes a small data exchange program
@@ -52,6 +54,13 @@ using UNIX signals in C.
 9. Can only use two signals: SIGUSR1, SIGUSE2
 
 
+## Allowed Functions
+
+1. write
+2. ft_printf
+3. signal(): 
+4. a
+
 ## Test cases
 
 1. Positive cases
@@ -65,3 +74,7 @@ using UNIX signals in C.
 3. Edge cases
    - NA
 
+### References
+1. Explains the concepts of UNIX signals as a form of Inter-Process Communication (IPC): UNIX Signals as IPC: A Comprehensive Guide [https://github.com/ANSANJAY/unix-signals-ipc-guide]
+2. Stackoverflow: How do signals work? [https://stackoverflow.com/questions/4208004/how-do-unix-signals-work]
+3. Signal Handling in Linux [https://www.youtube.com/watch?v=RU0ULe2f6hI]
