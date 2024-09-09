@@ -13,10 +13,12 @@ void    signal_handler(int signum)
     if (signum == SIGUSR1)
     {
         //Make the client only send SIGUSR1
+        printf("Received signal SIGUSR1\n");
     }
     else if (signum == SIGUSR2)
     {
         //Print something else 
+        printf("Received signal SIGUSR2\n");
     }
 }
 
@@ -26,7 +28,7 @@ int main()
     struct  sigaction sa;
 
     server_pid = getpid();
-    printf("Server has started. Enter process id (pid) for client: %i", server_pid);
+    printf("Server has started. Enter process id (pid) for client: %i \n", server_pid);
 
     sa.sa_handler = signal_handler;
 
@@ -36,6 +38,6 @@ int main()
     
     while(1)
     {
-
+        pause();
     }
 }

@@ -6,7 +6,7 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:57:55 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/09 16:04:18 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/09/09 16:44:06 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,17 @@
 
 
 #include <stdio.h>
+#include <string.h>
 
 /**
  * @brief: Sends string passed as param to the server to print
  * @param: server_pid - PID number from the server
  * @param: string_to_send - String sent 
 */
-void client(pid_t input_pid, char *string_to_send)
-{
+// void client(pid_t input_pid, char *string_to_send)
+// {
     
-}
+// }
 
 int main(int argc, char *argv[])
 {
@@ -35,18 +36,20 @@ int main(int argc, char *argv[])
 
     if (argc == 3)
     {
-        input_pid = ft_atoi(argv[1]);
-        
-        if (input_pid == -1 || input_pid <= 2261779)
+        // input_pid = ft_atoi(argv[1]);
+        input_pid = atoi(argv[1]);
+
+        if (input_pid == -1)
             exit(EXIT_FAILURE);
         
         //Yes I should malloc and error handle here
-        input_str = argv[1];
+        input_str = argv[2];
         
         //send signal
         kill(input_pid, SIGUSR1);
+        printf(input_str);
         //decode signal from bits to number?
-        printf("PID entered by the user is: %s", server_pid);
+        // printf("PID entered by the user is: %s", server_pid);
         
     }
     else
