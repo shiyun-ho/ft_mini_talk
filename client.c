@@ -6,7 +6,7 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:57:55 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/09 16:44:06 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/09/09 16:46:35 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int main(int argc, char *argv[])
         
         //send signal
         kill(input_pid, SIGUSR1);
-        printf(input_str);
+        
+        
         //decode signal from bits to number?
         // printf("PID entered by the user is: %s", server_pid);
         

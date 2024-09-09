@@ -12,8 +12,9 @@ void    signal_handler(int signum)
     //verify if the server_pid is the same as input from client
     if (signum == SIGUSR1)
     {
-        //Make the client only send SIGUSR1
         printf("Received signal SIGUSR1\n");
+        //How do I get the bits from client to this?
+        
     }
     else if (signum == SIGUSR2)
     {
