@@ -4,13 +4,14 @@
 
 void handle_sigtstp(int sig)
 {
-    printf("Stop not allowed.\n");
+    if (sig == SIGTSTP)
+        printf("Stop not allowed.\n");
 }
 
 int main(int argc, char *argv[])
 {
     struct sigaction signal_action;
-    signal_action.handler = &handle_sigtstp;
+    signal_action.sa_handler = handle_sigtstp;
     sigaction(SIGTSTP, &signal_action, NULL);
 
     int x;

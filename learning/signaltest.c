@@ -23,8 +23,8 @@ int main()
     printf("PID: %d\n", getpid());
 
     /* Overload signal handler */
-    signal(SIG1, signal_handler);
-    signal(SIG2, signal_handler);
+    signal(SIG1, signal_handler1);
+    signal(SIG2, signal_handler2);
 
     /* Start an endless loop */
     printf("Waiting for signals...\n");
