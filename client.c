@@ -6,7 +6,7 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:51:36 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/28 21:10:53 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/09/28 21:29:19 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    send_char_to_bit(pid_t input_pid, char character)
             kill(input_pid, SIGUSR1);
         else
             kill(input_pid, SIGUSR2);        
-        usleep(100);
+        usleep(2000);
         bit--;
     }
 }
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
             i++;
         }
         send_char_to_bit(input_pid, '\0');
-        usleep(100000);
+        usleep(100);
         // send_char_to_bit(input_pid, '\n');
     }
     else
