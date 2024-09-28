@@ -6,7 +6,7 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 11:17:03 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/04 20:21:26 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/09/28 20:59:38 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 void	*ft_calloc(size_t n, size_t size);
 char	*ft_strdup(const char *s);
 

@@ -6,7 +6,7 @@
 #    By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/04 20:03:42 by hshi-yun          #+#    #+#              #
-#    Updated: 2024/09/04 21:04:27 by hshi-yun         ###   ########.fr        #
+#    Updated: 2024/09/28 14:05:20 by hshi-yun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,8 @@ $(SERVER) $(CLIENT): $(OBJ_SERVER) $(OBJ_CLIENT) $(LIBFT)
 	$(MAKE) -C $(LIBFT)
 	cp $(LIBFT)/libft.a .
 	@echo ">>> Starting compilation of CLIENT and SERVER files: "
-	$(CC) $(CFLAGS) $(LIBFT)/libft.a -o $(SERVER) $(SRC_SERVER)
-	$(CC) $(CFLAGS) $(LIBFT)/libft.a -o $(CLIENT) $(SRC_CLIENT)
+	$(CC) $(CFLAGS) $(SRC_SERVER) -o $(SERVER)  libft.a
+	$(CC) $(CFLAGS) $(SRC_CLIENT) -o $(CLIENT) libft.a 
 	@echo ">>> Compilation completed. "
 
 norminette:
