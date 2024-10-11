@@ -6,7 +6,7 @@
 /*   By: hshi-yun <hshi-yun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:48:25 by hshi-yun          #+#    #+#             */
-/*   Updated: 2024/09/30 18:48:25 by hshi-yun         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:58:00 by hshi-yun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,7 @@ void	signal_handler(int signum, siginfo_t *info, void *u_context)
 	static int	binary_form[8];
 	static int	bit_index;
 
-	u_context += 1;
-	u_context -= 1;
+	(void) u_context;
 	if (signum == SIGUSR1)
 	{
 		binary_form[bit_index] = 0;
